@@ -1,37 +1,38 @@
 /*Author: thyplock*/
 
 body, html {
-    height: 100%;
     margin: 0;
+    height: 100%;
 }
 
 .bg {
     height: 100%; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .arrow {
-    background-color: rgba(0, 0, 0, 0);
     border: 0px;
+    outline:none;
     font-size: 5vh;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .previous {
-    position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    padding: 10px;
+    bottom: 0;
     margin: auto;
+    padding: 10px;
+    position: absolute;
 }
 
 .next {
-    position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
-    padding: 10px;
+    bottom: 0;
     margin: auto;
+    padding: 10px;
+    position: absolute;
 }
