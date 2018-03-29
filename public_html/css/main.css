@@ -1,15 +1,37 @@
-/* Author: thyplock */
+/*Author: thyplock*/
 
-body {
-    background-color: black;
+body, html {
+    height: 100%;
+    margin: 0;
 }
 
-.title {
-    color: chartreuse;
-    font-size: 3.2vw;
+.bg {
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.centered {
-    text-align: center;
-    margin: auto 0;
+.arrow {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    font-size: 5vh;
+}
+
+.previous {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    margin: auto;
+}
+
+.next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin: auto;
 }
