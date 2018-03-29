@@ -15,7 +15,7 @@ define(['ko'], function (ko) {
         self.init = function () {
             self.image(self.images[self.index]);
         };
-        
+
         //Previous image
         self.previous = function () {
             self.index--;
@@ -25,8 +25,7 @@ define(['ko'], function (ko) {
             }
             self.loadImage();
         };
-        
-        
+
         //Next image
         self.next = function () {
             self.index++;
@@ -35,10 +34,20 @@ define(['ko'], function (ko) {
             }
             self.loadImage();
         };
-        
+
+        //Arrow pressed
+        self.arrowPressed = function (data, event) {
+            var key = event.key;
+            if (key === 'ArrowLeft') {
+                self.previous();
+            } else if (key === 'ArrowRight') {
+                self.next();
+            }
+            return true;
+        };
+
         //Load image
-        self.loadImage = function() {
-            console.log(self.index);
+        self.loadImage = function () {
             self.image(self.images[self.index]);
         };
     }

@@ -14,7 +14,7 @@
         <!--SCRIPTS-->
         <script data-main="js/main" src="libs/require/require.js"></script>
     </head>
-    <body>
+    <body data-bind="valueUpdate: 'afterkeydown', event: {keydown: arrowPressed}">
         <!-- ko ifnot: image -->
         <h2>BRUNO ALTADILL</h2>
         <!-- /ko -->
