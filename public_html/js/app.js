@@ -12,10 +12,10 @@ define(['ko'], function (ko) {
             '04.jpg'
         ];
         self.footers = [
-            {"title": "Infinite Meditation", "description": "description_1"},
-            {"title": "Mother Nature", "description": "description_2"},
-            {"title": "Faith In Energy", "description": "description_3"},
-            {"title": "John the Baptist", "description": "description_4"}
+            {"title": "Infinite Meditation", "description": ""},
+            {"title": "Mother Nature", "description": ""},
+            {"title": "Faith In Energy", "description": ""},
+            {"title": "John the Baptist", "description": ""}
         ];
 
         //Init page
