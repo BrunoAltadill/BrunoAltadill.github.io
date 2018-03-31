@@ -4,16 +4,23 @@ define(['ko'], function (ko) {
         var self = this;
         self.index = 0;
         self.image = ko.observable();
+        self.footer = ko.observable();
         self.images = [
             '01.jpg',
             '02.jpg',
             '03.jpg',
             '04.jpg'
         ];
+        self.footers = [
+            {"title": "title_1", "description": "description_1"},
+            {"title": "title_2", "description": "description_2"},
+            {"title": "title_3", "description": "description_3"},
+            {"title": "title_4", "description": "description_4"}
+        ];
 
         //Init page
         self.init = function () {
-            self.image(self.images[self.index]);
+            loadImage();
         };
 
         //Previous image
@@ -23,7 +30,7 @@ define(['ko'], function (ko) {
                 self.index = self.images.length;
                 self.index--;
             }
-            self.loadImage();
+            loadImage();
         };
 
         //Next image
@@ -32,7 +39,7 @@ define(['ko'], function (ko) {
             if (self.index >= self.images.length) {
                 self.index = 0;
             }
-            self.loadImage();
+            loadImage();
         };
 
         //Arrow pressed
@@ -47,9 +54,10 @@ define(['ko'], function (ko) {
         };
 
         //Load image
-        self.loadImage = function () {
+        function loadImage() {
             self.image(self.images[self.index]);
-        };
+            self.footer(self.footers[self.index]);
+        }
     }
 
     return new Model();

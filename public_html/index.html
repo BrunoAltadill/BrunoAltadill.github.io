@@ -15,16 +15,13 @@
         <script data-main="js/main" src="libs/require/require.js"></script>
     </head>
     <body data-bind="valueUpdate: 'afterkeydown', event: {keydown: arrowPressed}">
-        <!-- ko ifnot: image -->
-        <h2>BRUNO ALTADILL</h2>
-        <!-- /ko -->
-        
-        <!-- ko if: image -->
         <div data-bind="style: {'background-image': 'url(\'img/' + image() + '\')' }" class="bg">
             <button data-bind="click: previous" class="arrow previous"><</button>
             <button data-bind="click: next" class="arrow next">></button>
+            <div class="footer">
+                <h2 data-bind="text: footer().title" class="title">Title</h2>
+                <p data-bind="text: footer().description" class="description">Description...</p>
+            </div>
         </div>
-        <!-- /ko -->
-        
     </body>
 </html>

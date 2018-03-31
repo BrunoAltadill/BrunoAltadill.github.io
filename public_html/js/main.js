@@ -7,6 +7,6 @@ require.config({
 
 require(['ko', 'ko-mapping', 'app'], function (ko, mapping, app) {
     ko.mapping = mapping;
-    ko.applyBindings(app);
     app.init();
+    ko.applyBindings(app);
 });
